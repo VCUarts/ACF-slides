@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Flexible Layouts with Advanced Custom Fields</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A presentation on creating flexible layouts with ACF">
+		<meta name="author" content="VCUarts Web Development Team">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/vcuarts.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,99 +42,76 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+				<section data-background="#F25F54">
+					<h1>Flexible Layouts</h1>
+					<h4>with Advanced Custom Fields</h4>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small><a href="https://github.com/luetkemj">Mark Luetke</a> / <a href="https://github.com/streeetlamp">Cody Whitby</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
+					<h2>Advanced Custom Fields</h2>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+						ACF is a WordPress plugin that extends the functionality of custom fields and allows for more dynamic content that would be hard to fit in the default content editor.
 					</p>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Bring up the Fashion site frontend and then dashboard as an example. Talk about other ways this has been done, shortcodes, hardcoded includes, etc.
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+					<h2>Basic ACF Example</h2>
+					<pre><code data-trim>
+the_field('basic_text');
+					</code></pre>
+
+					<p>With a conditional statement</p>
+					<pre><code data-trim>
+if(get_field('basic_text')) {
+	the_field('basic_text');
+}
+					</code></pre>
+
+					<aside class="notes">
+						Show basic live code example.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
+					<h2>Flexible Content Config</h2>
 					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
+						Setting up flex content stuff in WP. Start with just a WSIWYG box or something.
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
+					<h2>Flexible Content Loop</h2>
 					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+						Show a basic loop using the WSIWYG field we just set up.
 					</p>
 				</section>
 
 				<section>
-					<h2>Works in Mobile Safari</h2>
+					<h2>1 or 2 column conditional</h2>
 					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
+						Now hook up some 1 or 2 condtional stuff like the example does.
 					</p>
 				</section>
 
 				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
+					<h2>Add the Quote</h2>
+					<p>
+						Setup the quote field so we can see differenet fields doing different things.
+					</p>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<h2>Nested content example (slider)</h2>
+					<p>
+						Develop the slider as an example of nested content in a flex field.
+					</p>
 				</section>
 
 				<section data-markdown>
@@ -369,9 +346,10 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
+				mouseWheel: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
