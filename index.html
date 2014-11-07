@@ -89,65 +89,234 @@
 					</section>
 					
 					<section data-background="assets/img/superman.gif">
-						<h2>ACF!</h2>
+						<h2><strong>Advanced Custom Fields!</strong></h2>
 					</section>
-
-					<!-- <aside class="notes">
-						Bring up the Fashion site frontend and then dashboard as an example. Talk about other ways this has been done, shortcodes, hardcoded includes, etc.
-					</aside> -->
 				</section>
 
-<section>
-	<section data-background="assets/img/andy.gif">
-		<h2>How do I ACF?</h2>
-	</section>
-	
-	<section data-background="assets/img/doc.gif">
-		<h2>Install and activate the plugin(s)</h2>
-	</section>
+				<section>
+					<section>
+						<h2>So how do I ACF?</h2>
+					</section>
+					
+					<section>
+						<h2>Install and activate the plugin(s)</h2>
+					</section>
 
-	<section>
-		<h2>example time</h2>
+					<section data-background="assets/img/doc.gif">
+						<h2>Install and activate the plugin(s)</h2>
+					</section>
 
-		<ul>
-			<li>simple text element for post - show it in WP</li>
-			<li>an image</li>
-			<li>maybe something extra on top of that</li>
-			<li><a href="http://www.advancedcustomfields.com/resources/" target="_blank">link to docs</a> so they  can see all the awesome amaze available</li>
-		</ul>
-	</section>
-</section>
+					<section>
+						<h2>Make some fields!</h2>
+					</section>
 
+					<section>
+						<h2>Demo Time</h2>
 
-
+						<ul>
+							<li class="fragment">Simple text field</li>
+							<li class="fragment">An image object</li>
+							<li class="fragment">A slider using a repeater and nested content</li>
+				<!-- 			<li><a href="http://www.advancedcustomfields.com/resources/" target="_blank">link to docs</a> so they  can see all the awesome amaze available</li> -->
+						</ul>
+					</section>
+				</section>
 
 				<section>
 
 					<section>
-							<h2>Basic ACF Example</h2>
+							<h2>Text Field Example</h2>
 							<p>Create a new text_field</p>
-							<p><a href="#">Cody</a> we need an image from the ACF dashboard showing a new basic text field being created.</p>
+							<a href="assets/img/text-field.png" target="_blank">
+								<img src="assets/img/text-field.png" />
+							</a>
 					</section>
 
-
-
-
 					<section>
-							<h2>Basic ACF Example</h2>
+							<h2>Text Field Example</h2>
+							<p>Retrieving the field in a template</p>
 						<pre><code data-trim>
 the_field('basic_text');
 						</code></pre>
 
-						<p>With a conditional statement</p>
+						<p>With a conditional statement. <br>
+						<small>If the field is empty, don't do anything.</small></p>
 						<pre><code data-trim>
 if( get_field('basic_text') ) {
-	the_field('basic_text');
+  the_field('basic_text');
 }
 						</code></pre>
+					</section>
 
-						<aside class="notes">
-							Show basic live code example.
-						</aside>
+				</section>
+
+				<section>
+					
+					<section>
+						<h2>Working with images</h2>
+						<p>Create an image field that returns a URL</p>
+						<a href="assets/img/image-field-url.png" target="_blank">
+							<img src="assets/img/image-field-url.png" />
+						</a>
+					</section>
+
+					<section>
+						<h2>Working with images</h2>
+						<p>Retrieving it just like the text field, just in a IMG tag</p>
+						<pre><code data-trim>
+<img src="<?php the_field('image_field');?>">
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Working with images</h2>
+						<p>As objects!</p>
+						<a href="assets/img/image-object.png" target="_blank">
+							<img src="assets/img/image-object.png" />
+						</a>
+					</section>
+
+					<section data-background="assets/img/dance.gif">
+						<h2>Working with images</h2>
+						<p>The power of arrays and variables</p>
+					</section>
+
+					<section data-background="assets/img/bucket.jpg">
+						<h2>Variables</h2>
+						<p>A bucket with a taped on label</p>
+					</section>
+
+					<section>
+						<object width="425" height="344"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+					</section>
+
+					<section>
+						<h2>Variables</h2>
+						<p>A bucket with a taped on label</p>
+						<pre><code data-trim>
+$image = get_field('image_field');
+						</code></pre>
+						<p>Whats in our bucket?</p>
+						<pre><code data-trim>
+print_r($image);
+						</code></pre>
+						<p><small>Array ( [id] => 58 [alt] => Its a corgi [title] => 180 [caption] => [description] => [mime_type] => image/jpeg [url] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg [width] => 260 [height] => 180 [sizes] => Array ( [thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-150x150.jpg [thumbnail-width] => 150 [thumbnail-height] => 150 [medium] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg [medium-width] => 260 [medium-height] => 180 [large] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg [large-width] => 260 [large-height] => 180 [bones-thumb-600] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x150.jpg [bones-thumb-600-width] => 260 [bones-thumb-600-height] => 150 [bones-thumb-300] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x100.jpg [bones-thumb-300-width] => 260 [bones-thumb-300-height] => 100 [post-thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-125x125.jpg [post-thumbnail-width] => 125 [post-thumbnail-height] => 125 ) )</small></p>
+
+						<strong>Its an array!</strong>
+					</section>
+
+					<section data-background="assets/img/adventure-time.gif">
+						<h2>Arrays</h2>
+						<p>A beautiful tree full of data</p>
+					</section>
+
+					<section>
+						<h2>Arrays</h2>
+						<p>Our data tree</p>
+
+						<pre><code data-trim>
+Array (
+	[id] => 58
+	[alt] => Its a corgi
+	[title] => 180
+	[caption] =>
+	[description] =>
+	[mime_type] => image/jpeg
+	[url] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg
+	[width] => 260
+	[height] => 180
+	[sizes] => Array (
+		[thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-150x150.jpg
+		[thumbnail-width] => 150
+		[thumbnail-height] => 150
+		[medium] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg
+		[medium-width] => 260
+		[medium-height] => 180
+		[large] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg
+		[large-width] => 260
+		[large-height] => 180
+		[bones-thumb-600] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x150.jpg
+		[bones-thumb-600-width] => 260
+		[bones-thumb-600-height] => 150
+		[bones-thumb-300] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x100.jpg
+		[bones-thumb-300-width] => 260
+		[bones-thumb-300-height] => 100
+		[post-thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-125x125.jpg
+		[post-thumbnail-width] => 125
+		[post-thumbnail-height] => 125
+	)
+)
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Working with images</h2>
+						<p>Pulling values from the array and displaying a image</p>
+						<pre><code data-trim>
+$image = get_field('image_field');
+<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+					
+					<section>
+						<h2>Building a slider</h2>
+						<p>Using a repeater field and nested content</p>
+					</section>
+
+					<section data-background="assets/img/otter.gif">
+						<h2>Building a slider</h2>
+						<p>Using a repeater field and nested content</p>
+					</section>
+
+					<section>
+						<h2>Slider ACF Configuration</h2>
+						<p>Repeater Field</p>
+						<a href="assets/img/slider.png" target="_blank">
+							<img src="assets/img/slider.png" />
+						</a>
+					</section>
+
+					<section>
+						<h2>Slider ACF Configuration</h2>
+						<p>Repeater Sub Fields</p>
+						<p>Just like previous examples except they are sub fields of the slider repeater now.</p>
+						<a href="assets/img/subfields.png" target="_blank">
+							<img src="assets/img/subfields.png" />
+						</a>
+					</section>
+
+					<section>
+						<h2>Building the slider</h2>
+						<p>Via the almighty loop</p>
+					</section>
+
+					<section data-background="assets/img/loop.gif">
+						<h2>Whats a loop?</h2>
+						<p>Some instructions that repeat until a condition is met</p>
+					</section>
+
+					<section>
+						<h2>Building the slider</h2>
+						<p>Our Loop</p>
+						<pre><code data-trim>
+//before we start the loop, do we even have anything to loop
+if( have_rows('slider') ):
+
+  //ok we have data so lets loop
+  while ( have_rows('slider') ) : the_row();
+
+    //notice we are using get_sub_field()
+    $image = get_sub_field('slide_image');
+    <img src="<?php echo $image[url]; ?>" />
+    
+  endwhile;
+
+endif;
+						</code></pre>
 					</section>
 
 				</section>
