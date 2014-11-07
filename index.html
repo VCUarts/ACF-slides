@@ -54,7 +54,7 @@
 					<section>
 						<h2>Advanced Custom Fields</h2>
 						<p>
-							ACF is a WordPress plugin that extends the functionality of custom fields and allows for more dynamic content that would be hard to fit in the default content editor.
+							ACF is a WordPress plugin that extends the functionality of custom fields and allows for more dynamic content that would be difficult or impossible with the default editor.
 						</p>						
 					</section>
 
@@ -102,53 +102,89 @@
 						<h2>Install and activate the plugin(s)</h2>
 					</section>
 
-					<section data-background="assets/img/doc.gif">
-						<h2>Install and activate the plugin(s)</h2>
-					</section>
+					<section data-background="assets/img/doc.gif"></section>
 
-					<section>
+					<section data-background="assets/img/fields.jpg">
 						<h2>Make some fields!</h2>
+						<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/#field-types">http://www.advancedcustomfields.com/resources/#field-types</a></p>
+					</section>
+				</section> 
+
+				<section>
+					<section>
+							<h2>Text</h2>
+							<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/text/">http://www.advancedcustomfields.com/resources/text/</a></p>
 					</section>
 
 					<section>
-						<h2>Demo Time</h2>
+							<h2>Image</h2>
+							<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/image/">http://www.advancedcustomfields.com/resources/image/</a></p>
+					</section>
 
-						<ul>
-							<li class="fragment">Simple text field</li>
-							<li class="fragment">An image object</li>
-							<li class="fragment">A slider using a repeater and nested content</li>
-				<!-- 			<li><a href="http://www.advancedcustomfields.com/resources/" target="_blank">link to docs</a> so they  can see all the awesome amaze available</li> -->
-						</ul>
+					<section>
+							<h2>WYSIWYG</h2>
+							<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/wysiwyg-editor/">http://www.advancedcustomfields.com/resources/wysiwyg-editor/</a></p>
 					</section>
 				</section>
+
 
 				<section>
 
+				<section data-background="assets/img/otter.gif"></section>
+
 					<section>
-							<h2>Text Field Example</h2>
-							<p>Create a new text_field</p>
-							<a href="assets/img/text-field.png" target="_blank">
-								<img src="assets/img/text-field.png" />
-							</a>
+						<h2>What about a slider?</h2>
+						<p></p>
+					</section>
+					
+					<section>
+						<h2>First consider the problem</h2>
+						<ul>
+							<li>Must have an image</li>
+							<li>Can have a caption</li>
+							<li>User should be able to add or remove slides</li>
+						</ul>
 					</section>
 
 					<section>
-							<h2>Text Field Example</h2>
-							<p>Retrieving the field in a template</p>
-						<pre><code data-trim>
-the_field('basic_text');
-						</code></pre>
-
-						<p>With a conditional statement. <br>
-						<small>If the field is empty, don't do anything.</small></p>
-						<pre><code data-trim>
-if( get_field('basic_text') ) {
-  the_field('basic_text');
-}
-						</code></pre>
+						<ul>
+							<li>We know how to do images</li>
+							<li>A caption is just text and we know how to do that too</li>
+							<li>But what about adding and removing slides?</li>
+						</ul>
 					</section>
+
+					<section>
+						<h2>Ask google</h2>
+						<p><a target="_blank" href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=how%20do%20i%20add%20and%20remove%20slides%20with%20acf%3f">how do I add and remove slides with ACF?</a></p>
+					</section>
+
+					<section>
+						<h2>Repeater</h2>
+						<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/repeater/">http://www.advancedcustomfields.com/resources/repeater/</a></p>
+					</section>
+
+<section data-background="assets/img/notbad.gif"></section>
+
+
 
 				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 				<section>
 					
@@ -181,14 +217,13 @@ if( get_field('basic_text') ) {
 						<p>The power of arrays and variables</p>
 					</section>
 
-					<section data-background="assets/img/bucket.jpg">
-						<h2>Variables</h2>
-						<p>A bucket with a taped on label</p>
+					<section>
+					<h2>Variables</h2>
+					<p>Very much like a useful pot.</p>
+						<object width="825" height="644"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
 					</section>
 
-					<section>
-						<object width="425" height="344"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
-					</section>
+					<section data-background="assets/img/bucket.jpg"></section>
 
 					<section>
 						<h2>Variables</h2>
@@ -354,6 +389,27 @@ endif;
 					<p>
 						Develop the slider as an example of nested content in a flex field.
 					</p>
+				</section>
+
+
+
+
+
+
+
+		<section data-background="assets/img/snow.gif">
+			<h2>ACF</h2>
+			<p>Solves most everything</p>
+		</section>
+
+
+
+
+
+
+
+				<section data-background="assets/img/questions.gif">
+					<h2>Questions?</h2>
 				</section>
 
 				<section data-markdown>
