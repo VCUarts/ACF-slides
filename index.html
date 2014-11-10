@@ -104,7 +104,7 @@
 
 					<section data-background="assets/img/doc.gif"></section>
 
-					<section data-background="assets/img/fields.jpg">
+					<section>
 						<h2>Make some fields!</h2>
 						<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/#field-types">http://www.advancedcustomfields.com/resources/#field-types</a></p>
 					</section>
@@ -164,17 +164,7 @@
 						<h2>Repeater</h2>
 						<p><a target="_blank" href="http://www.advancedcustomfields.com/resources/repeater/">http://www.advancedcustomfields.com/resources/repeater/</a></p>
 					</section>
-
-					<section data-background="assets/img/notbad.gif"></section>
-
 				</section>
-
-
-
-
-
-
-
 
 <section>
 
@@ -189,7 +179,7 @@
 	<section>
 		<h2>Variables</h2>
 		<p>Very much like a useful pot.</p>
-			<object width="825" height="644"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+			<object width="625" height="500"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
 	</section>
 	
 	<section data-background="assets/img/bucket.jpg"></section>
@@ -201,10 +191,6 @@
 	</section>
 
 	<section data-background="assets/img/table.gif"></section>
-
-		<section>Or a beautiful tree of data</section>
-	
-	<section data-background="assets/img/adventure-time.gif"></section>
 
 	<section>
 		<h2>Functions</h2>
@@ -225,215 +211,8 @@
 
 
 
-<!-- 				<section>
-					
-					<section>
-						<h2>Working with images</h2>
-						<p>Create an image field that returns a URL</p>
-						<a href="assets/img/image-field-url.png" target="_blank">
-							<img src="assets/img/image-field-url.png" />
-						</a>
-					</section>
-
-					<section>
-						<h2>Working with images</h2>
-						<p>Retrieving it just like the text field, just in a IMG tag</p>
-						<pre><code data-trim>
-<img src="<?php the_field('image_field');?>">
-						</code></pre>
-					</section>
-
-					<section>
-						<h2>Working with images</h2>
-						<p>As objects!</p>
-						<a href="assets/img/image-object.png" target="_blank">
-							<img src="assets/img/image-object.png" />
-						</a>
-					</section>
-
-					<section data-background="assets/img/dance.gif">
-						<h2>Working with images</h2>
-						<p>The power of arrays and variables</p>
-					</section>
-
-					<section>
-					<h2>Variables</h2>
-					<p>Very much like a useful pot.</p>
-						<object width="825" height="644"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=OpIT3t3_t7A&start=1230&end=1276&cid=3929329" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
-					</section>
-
-					<section data-background="assets/img/bucket.jpg"></section>
-
-					<section>
-						<h2>Variables</h2>
-						<p>A bucket with a taped on label</p>
-						<pre><code data-trim>
-$image = get_field('image_field');
-						</code></pre>
-						<p>Whats in our bucket?</p>
-						<pre><code data-trim>
-print_r($image);
-						</code></pre>
-						<p><small>Array ( [id] => 58 [alt] => Its a corgi [title] => 180 [caption] => [description] => [mime_type] => image/jpeg [url] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg [width] => 260 [height] => 180 [sizes] => Array ( [thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-150x150.jpg [thumbnail-width] => 150 [thumbnail-height] => 150 [medium] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg [medium-width] => 260 [medium-height] => 180 [large] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg [large-width] => 260 [large-height] => 180 [bones-thumb-600] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x150.jpg [bones-thumb-600-width] => 260 [bones-thumb-600-height] => 150 [bones-thumb-300] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x100.jpg [bones-thumb-300-width] => 260 [bones-thumb-300-height] => 100 [post-thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-125x125.jpg [post-thumbnail-width] => 125 [post-thumbnail-height] => 125 ) )</small></p>
-
-						<strong>Its an array!</strong>
-					</section>
-
-					<section data-background="assets/img/adventure-time.gif">
-						<h2>Arrays</h2>
-						<p>A beautiful tree full of data</p>
-					</section>
-
-					<section>
-						<h2>Arrays</h2>
-						<p>Our data tree</p>
-
-						<pre><code data-trim>
-Array (
-	[id] => 58
-	[alt] => Its a corgi
-	[title] => 180
-	[caption] =>
-	[description] =>
-	[mime_type] => image/jpeg
-	[url] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg
-	[width] => 260
-	[height] => 180
-	[sizes] => Array (
-		[thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-150x150.jpg
-		[thumbnail-width] => 150
-		[thumbnail-height] => 150
-		[medium] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg
-		[medium-width] => 260
-		[medium-height] => 180
-		[large] => http://acf-demo.dev/wp-content/uploads/2014/11/180.jpg
-		[large-width] => 260
-		[large-height] => 180
-		[bones-thumb-600] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x150.jpg
-		[bones-thumb-600-width] => 260
-		[bones-thumb-600-height] => 150
-		[bones-thumb-300] => http://acf-demo.dev/wp-content/uploads/2014/11/180-260x100.jpg
-		[bones-thumb-300-width] => 260
-		[bones-thumb-300-height] => 100
-		[post-thumbnail] => http://acf-demo.dev/wp-content/uploads/2014/11/180-125x125.jpg
-		[post-thumbnail-width] => 125
-		[post-thumbnail-height] => 125
-	)
-)
-						</code></pre>
-					</section>
-
-					<section>
-						<h2>Working with images</h2>
-						<p>Pulling values from the array and displaying a image</p>
-						<pre><code data-trim>
-$image = get_field('image_field');
-<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						</code></pre>
-					</section>
-
-				</section>
-
-				<section>
-					
-					<section>
-						<h2>Building a slider</h2>
-						<p>Using a repeater field and nested content</p>
-					</section>
-
-					<section data-background="assets/img/otter.gif">
-						<h2>Building a slider</h2>
-						<p>Using a repeater field and nested content</p>
-					</section>
-
-					<section>
-						<h2>Slider ACF Configuration</h2>
-						<p>Repeater Field</p>
-						<a href="assets/img/slider.png" target="_blank">
-							<img src="assets/img/slider.png" />
-						</a>
-					</section>
-
-					<section>
-						<h2>Slider ACF Configuration</h2>
-						<p>Repeater Sub Fields</p>
-						<p>Just like previous examples except they are sub fields of the slider repeater now.</p>
-						<a href="assets/img/subfields.png" target="_blank">
-							<img src="assets/img/subfields.png" />
-						</a>
-					</section>
-
-					<section>
-						<h2>Building the slider</h2>
-						<p>Via the almighty loop</p>
-					</section>
-
-					<section data-background="assets/img/loop.gif">
-						<h2>Whats a loop?</h2>
-						<p>Some instructions that repeat until a condition is met</p>
-					</section>
-
-					<section>
-						<h2>Building the slider</h2>
-						<p>Our Loop</p>
-						<pre><code data-trim>
-//before we start the loop, do we even have anything to loop
-if( have_rows('slider') ):
-
-  //ok we have data so lets loop
-  while ( have_rows('slider') ) : the_row();
-
-    //notice we are using get_sub_field()
-    $image = get_sub_field('slide_image');
-    <img src="<?php echo $image[url]; ?>" />
-    
-  endwhile;
-
-endif;
-						</code></pre>
-					</section>
-
-				</section>
-
-				<section>
-					<h2>Flexible Content Config</h2>
-					<p>
-						Setting up flex content stuff in WP. Start with just a WSIWYG box or something.
-					</p>
-				</section>
-
-				<section>
-					<h2>Flexible Content Loop</h2>
-					<p>
-						Show a basic loop using the WSIWYG field we just set up.
-					</p>
-				</section>
-
-				<section>
-					<h2>1 or 2 column conditional</h2>
-					<p>
-						Now hook up some 1 or 2 condtional stuff like the example does.
-					</p>
-				</section>
-
-				<section>
-					<h2>Add the Quote</h2>
-					<p>
-						Setup the quote field so we can see differenet fields doing different things.
-					</p>
-				</section>
-
-				<section>
-					<h2>Nested content example (slider)</h2>
-					<p>
-						Develop the slider as an example of nested content in a flex field.
-					</p>
-				</section>
-
- -->
-
-<section>
-	<h2>Fashion site overview</h2>
+<section data-background="assets/img/cyriak.gif">
+	<h2>Flexible Content</h2>
 </section>
 
 
