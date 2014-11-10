@@ -171,3 +171,35 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #13daec; }
+
+
+
+
+
+
+/*with hearts*/
+.hearts{
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  z-index: 100;
+  font-family: Karla,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.hearts a{
+  text-decoration: none;
+  color: white;
+}
+
+.hearts img{
+  display: inline;
+  width: 85px;
+  position: relative;
+  top: 1px;
+}
+
+.hearts span{
+  color: #E62E42;
+}
